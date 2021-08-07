@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 class Solution {
     public int[] twoSum(int[] numbers, int target) {
         int a[] = new int[2];
@@ -18,24 +16,4 @@ class Solution {
         }
         return a;
     }
-    
-}
-
-
-public class Main
-{
-	public static void main(String[] args) {
-        Scanner inp = new Scanner(System.in);
-        int n = inp.nextInt();
-        int numbers[] = new int[n];
-        int target = inp.nextInt();
-        for(int i = 0; i<n; i++){
-            numbers[i] = inp.nextInt();
-        }
-        Solution s = new Solution();
-        int a[] = s.twoSum(numbers, target);
-        for(int i:a){
-            System.out.print(i + " ");
-        }
-	}
 }
