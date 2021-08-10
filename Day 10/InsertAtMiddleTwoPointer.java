@@ -31,18 +31,16 @@ class LinkedList {
             head = new Node(data);
         else {
             Node newNode = new Node(data);
-            Node ptr = head;
-            int len = 0;
-            while (ptr != null) {
-                len++;
-                ptr = ptr.next;
+            Node temp = head;
+            Node temp2 = head;
+            while (temp != null && temp.next != null) {
+                temp = temp.next.next;
+                if (temp == null)
+                    break;
+                temp2 = temp2.next;
             }
-            int count = ((len % 2) == 0) ? (len / 2) : (len + 1) / 2;
-            ptr = head;
-            while (count-- > 1)
-                ptr = ptr.next;
-            newNode.next = ptr.next;
-            ptr.next = newNode;
+            newNode.next = temp2.next;
+            temp2.next = newNode;
         }
     }
 }
@@ -56,7 +54,7 @@ class Node {
     }
 }
 
-public class InsertAtMiddle {
+public class InsertAtMiddleTwoPointer {
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
         LinkedList list = new LinkedList();
