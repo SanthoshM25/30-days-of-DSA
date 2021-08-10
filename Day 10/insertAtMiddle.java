@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 class LinkedList {
     Node head;
-
     public void insert(int data) {
         Node newNode = new Node(data);
         if (head == null) {
