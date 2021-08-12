@@ -9,6 +9,21 @@ class Node {
 class LinkedList {
     Node head;
 
+    void deleteDuplicates(){
+        if(head == null) return;
+        Node current = head;
+        Node nextNode = head.next;
+        while(nextNode!=null){
+            if(current.data == nextNode.data){
+                current.next = nextNode.next;
+                nextNode = nextNode.next;
+            }else{
+                current = current.next;
+                nextNode = nextNode.next;
+            }
+        }
+    }
+
     void addFirst(int data){
         if(head == null) head = new Node(data);
         else{
@@ -46,21 +61,6 @@ class LinkedList {
             Node node = new Node(data);
             previous.next = node;
             node.next = current;
-        }
-    }
-
-    void deleteDuplicates(){
-        if(head == null) return;
-        Node current = head;
-        Node nextNode = head.next;
-        while(nextNode!=null){
-            if(current.data == nextNode.data){
-                current.next = nextNode.next;
-                nextNode = nextNode.next;
-            }else{
-                current = current.next;
-                nextNode = nextNode.next;
-            }
         }
     }
 
