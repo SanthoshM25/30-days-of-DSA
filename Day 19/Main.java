@@ -73,6 +73,4 @@ public class Main {
         ts.print1();
         ts.print2();
     }
-
-
 }
