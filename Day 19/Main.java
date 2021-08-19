@@ -27,14 +27,14 @@ class TwoStacks {
     void pop1()
     {
         if(top1 == -1) System.out.println(-1);
-        else System.out.println(arr[top1--]);
+        else System.out.println("Popped from stack 1" + arr[top1--]);
     }
 
     //Function to remove an element from top of the stack2.
     void pop2()
     {
         if(top2 == size) System.out.println(-1);
-        else System.out.println(arr[top2++]);
+        else System.out.println("Popped from stack 2" + arr[top2++]);
     }
 
     //Function to print all the elements in stack1.
