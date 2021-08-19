@@ -1,12 +1,15 @@
 class TwoStacks {
     int size, top1, top2;
     int[] arr;
+
+    //default constructor
     public TwoStacks(){
         size = 100;
         arr = new int[size];
         top1 = -1;
         top2 = size;
     }
+
     void push1(int x)
     {
         if(top1 == 49) return;
@@ -39,9 +42,8 @@ class TwoStacks {
         if(top1 == -1) System.out.println(-1);
         else{
             System.out.println("Elements in Stack 2");
-            for(int i = 0; i<=top1; i++){
+            for(int i = 0; i<=top1; i++)
                 System.out.println(arr[i]);
-            }
         }
     }
 
@@ -50,9 +52,8 @@ class TwoStacks {
         if(top2 == 100) System.out.println(-1);
         else{
             System.out.println("Elements in Stack 2");
-            for(int i = 99; i>=top2; i--){
+            for(int i = 99; i>=top2; i--)
                 System.out.println(arr[i]);
-            }
         }
     }
 }
