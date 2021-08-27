@@ -1,4 +1,4 @@
-class GfG {
+class Solution {
     // Function to reverse the queue.
     public Queue<Integer> rev(Queue<Integer> q) {
         Stack<Integer> stack = new Stack<>();
